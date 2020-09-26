@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Line_Comparision
 {
@@ -9,7 +10,7 @@ namespace Line_Comparision
         {
             Console.WriteLine("Welcome to Line Comparison Computation Program");
 
-            ArrayList length = new ArrayList();
+            List<double> length = new List<double>();
             for (int i = 1; i < 3;i++)
                 {
                     Console.WriteLine("Enter the co-ordinates of one end of line {0} in x,y format", i);
@@ -26,8 +27,13 @@ namespace Line_Comparision
                 }
             if (length[0] == length[1])
                 Console.WriteLine("The lengths of both the lines are equal");
+            if (length[0]>length[1])
+            {
+                Console.WriteLine("The length of Line 1 is greater than that of line 2");
+            }
             else
-                Console.WriteLine("The lengths of both the lines are not equal");
+                Console.WriteLine("The length of Line 2 is greater than that of line 1");
+
 
 
 
